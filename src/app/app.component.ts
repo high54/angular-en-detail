@@ -9,4 +9,7 @@ import { of } from 'rxjs';
 export class AppComponent {
   title = 'en-details';
   paramsFromParent = { title: 'Modifier', color: 'accent' };
+  public afficher(event): void {
+    console.log(event);
+  }
 }

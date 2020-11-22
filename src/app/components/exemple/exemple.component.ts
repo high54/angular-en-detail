@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-exemple',
@@ -7,9 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ExempleComponent implements OnInit {
   @Input() params: any;
+  @Output() monEvent: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  public triggerEvent(): void {
+    this.monEvent.emit(this.params);
   }
 
 }

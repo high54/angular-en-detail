@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
-  <h1>Angular - @Input</h1>
+  <h1>Angular - @Output</h1>
 </mat-toolbar>
 <main>
-  <app-exemple [params]="paramsFromParent"></app-exemple>
+  <app-exemple (monEvent)="afficher($event)" [params]="paramsFromParent"></app-exemple>
 </main>
